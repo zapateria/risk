@@ -1,0 +1,138 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td 
+{ margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; }
+body { line-height:1; }
+ol,ul { list-style:none; }
+blockquote,q { quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after { content:'';content:none; }
+ins { text-decoration:none; }
+del { text-decoration:line-through; }
+table { border-collapse:collapse;border-spacing:0; }
+
+/*
+    The lines above are a reset stylesheet that aims to make the default
+    styles in all browsers act roughly the same. Good idea to use it in
+    all web projects!
+    
+    Everything below this comment is stuff we've written
+    ourselves. Some of the stuff isn't going to work in IE, but I'm happy
+    to help with all that later if necessary.
+*/
+
+.clearfix {
+    clear: both;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Verdana, Arial;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #0BF;
+}
+
+a,
+a:hover,
+a:visited {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#page {
+    margin: 1em 1em;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+#logo {
+    border: 1px solid #fff;
+    float: left;
+    margin: 0px 0px 0px;
+    font-size: 2em; /* 32px / 16px */
+    width: 600px;
+}
+
+#userinfo {
+    border: 1px solid #fff;
+    float: right;
+    text-align: left;
+    width: 396px;
+}
+
+#nav {
+    border: 1px solid #fff;
+    float: right;
+    text-align: center;
+    width: 998px;
+}
+#nav ul {
+	list-style-type: circle;
+}
+#nav li {
+	display: inline;
+	margin: 0px 10px;
+}
+#map {
+    background-image: url('img/game_map.png');
+    background-color: #AAA;
+    border: 1px solid #fff;
+    float: left;
+    color: #FFF;
+    margin: 0px 0px 0px;
+    min-height: 512px;
+    width: 998px;
+    position: relative;
+}
+
+#players {
+    border: 1px solid #fff;
+    float: right;
+    text-align: center;
+    width: 998px;
+}
+#players ul {
+	list-style-type: circle;
+}
+#players li {
+	display: inline;
+	margin: 0px 10px;
+}
+
+#messagelog {
+    border: 1px solid #fff;
+    float: left;
+    margin: 0px 0px 0px;
+    min-height: 200px;
+    width: 998px;
+}
+
+
+#player-info pre,
+#messagelog pre {
+    margin: 1em;
+}
+
+#commands {
+    float: left;
+    margin: 0px 0px 0px;
+    width: 50.625em; /* 810px / 16px */
+    width: 985px;
+}
+
+#commands input[type=text] {
+    background-color: #222;
+    border: 0;
+    color: #fff;
+    font-family: Monaco, monospace;
+    padding: 0.5em 0.5em 0.5em 2em; /* 8px 8px 8px 32px / 16px */
+    width: 48.5625em; /* 777px / 16px */
+    width: 965px;
+}
