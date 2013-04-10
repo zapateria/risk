@@ -10,7 +10,7 @@ require_once "include/functions.php";
 
         $player = loadObject($_SESSION['user_id'], "Player");
         if (!$player) {
-                echo "You have been deleted.";
+                echo "Error: You have been deleted.";
                 exit;
         }
 //        $player->setInActive();
