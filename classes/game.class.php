@@ -25,10 +25,6 @@ class Game extends Object {
 		return $this->turn = $p->getID();
 	}
 
-
-	public function display() {
-	}
-
 	public function setMap($m) {
 		$this->map = $m;
 	}
@@ -61,7 +57,10 @@ class Game extends Object {
 		$o = "";
 		foreach ($objs as $p) {
 			$pl = loadObject($p, "Player");
-			$o .= "<li>" . $pl->getUsername(). "</li>";
+			if ($this->getTurn() && ($pl->getId() == $this->getTurn()->getId()))
+				$o .= "<li><u><b>".$pl->getUsername()."</b></u></li>";
+			else
+				$o .= "<li>" . $pl->getUsername(). "</li>";
 		}
 		return $o;
 	}		

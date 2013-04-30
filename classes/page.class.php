@@ -62,6 +62,7 @@ EOD;
 
 	public function renderLogin() {
 /*** START USER IS NOT LOGGED IN ***/
+
         	if (!isset($_SESSION['user_id'])) {
                 $login_form = <<<EOD
 <div id="login-window" title="User Login">

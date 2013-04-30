@@ -46,6 +46,11 @@ a:hover {
     color: #000;
 }
 
+
+#login-window label {
+	display: inline-block; width: 80px;
+}
+
 #page {
     margin: 1em 1em;
     max-width: 1000px;
@@ -58,6 +63,10 @@ a:hover {
     margin: 0px 0px 0px;
     font-size: 2em; /* 32px / 16px */
     width: 600px;
+}
+
+#newplayerinfo {
+    font-size: 2em; /* 32px / 16px */
 }
 
 #userinfo {
@@ -81,7 +90,11 @@ a:hover {
 	margin: 0px 10px;
 }
 #map {
-    background-color: #AAA;
+    font-family: Verdana, Arial;
+    font-size: 0.6em;
+    font-weight: normal;
+    text-transform:uppercase;
+    background-color: #333;
     border: 1px solid #fff;
     float: left;
     color: #FFF;
@@ -106,6 +119,13 @@ a:hover {
 }
 
 #messagelog {
+    border: 0px solid #fff;
+    float: left;
+    margin: 0px 0px 0px;
+    min-height: 200px;
+    width: 998px;
+}
+#tabs {
     border: 0px solid #fff;
     float: left;
     margin: 0px 0px 0px;

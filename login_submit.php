@@ -41,7 +41,7 @@ if (!isset( $_POST['username'], $_POST['password'])) {
         } else {
                 $_SESSION['user_id'] = $user_id;
                 $message = 'You are now logged in';
-		header("Location: ui.php");
+		header("Location: index.php");
         }
 
 

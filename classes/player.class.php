@@ -28,6 +28,14 @@ class Player extends Object {
 		return $this->game;
 	}
 
+/* Active unit */
+	public function setUnit($u) {
+		$this->unit = $u->getId();
+	}
+	public function getUnit() {
+		if ($this->unit)
+			return loadObject($this->unit, "Unit");
+	}
 
 /* Player experience */
 	public function addExp($e) {

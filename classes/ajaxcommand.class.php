@@ -82,7 +82,6 @@ class AjaxCommand {
 			$c = $map->getCountry($this->getArgs());
 			var_dump($c->getUnit($g));
 			break;
-		
 		case "l":
 		case "log":
 	                if ($player = $GLOBALS['player']) {
@@ -113,7 +112,8 @@ class AjaxCommand {
 			$g->create();
 			$g->setName($this->getArgs());
 			$g->addPlayer($GLOBALS['player']);
-			$g->setMap(39);
+			$g->setMap(1);
+			$g->setTurn($GLOBALS['player']);
 			$g->save();
 			$this->out("Game created");
 			break;		
@@ -126,6 +126,9 @@ class AjaxCommand {
 			$player->setGame($this->getArgs());
 			$player->save();
 			$this->out("Changed game to " . $player->getGame());
+			$game = loadObject($player->getGame(), "Game");
+			$game->addPlayer($player);
+			$game->save();
 			break;
 			
 		case "lg":

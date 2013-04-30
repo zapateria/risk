@@ -1,6 +1,6 @@
 <script>
 	$("button").button();
-        $("#login-window").dialog("option", "height", 300);
+        $("#login-window").dialog("option");
         $("#username").change(function() {
                 $("#username_validation").load("func/validate_username.php", {
                         username: $("#username").val()

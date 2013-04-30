@@ -31,7 +31,7 @@ if (!isset( $_POST['username'], $_POST['password'])) {
 }
 
 if (isset($message)) {
-	header("Location: ../ui.php");
+	header("Location: ../index.php");
 	die();
 }
 
@@ -49,6 +49,6 @@ echo "Userinfo accepted.";
 	$player->setPassword($password);
 	$player->save();
 
-	header("Location: ../ui.php");
+	header("Location: ../index.php");
 
 ?>

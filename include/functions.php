@@ -19,6 +19,18 @@ function getIP() {
 	return $ip; 
 }
 
+function isAdjacent($c1, $c2) {
+	$h = DB::getInstance()->prepare("SELECT * FROM Link WHERE (link1=:link1 AND link2=:link2) OR (link1=:link2 AND link2=:link1)");
+	$h->bindParam(":link1", $c1->getShortname());
+	$h->bindParam(":link2", $c2->getShortname());
+	$h->execute();
+	$obj = $h->fetchColumn();
+	if ($obj)
+		return true;
+	else
+		return false;
+}
+
 function getGames() {
 	$objs = array();
 	$h = DB::getInstance()->prepare("SELECT * FROM Game");
